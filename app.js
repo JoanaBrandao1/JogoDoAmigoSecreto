@@ -11,11 +11,20 @@ function adicionarAmigo(){
     }else{
         listaAmigos.innerHTML  = amigos;
     }
+    limparCampo();
 }
 function verificarExistencia(nome){
     if(amigos.includes(nome)){
-        alert('Digite outro nome');
+        alert('Este nome já foi digitado, digite outro nome');
     }else{
         amigos.push(nome)
     }
+}
+function gerarUmNomeAleatorio(){
+    let numeroAleatorio=parseInt(Math.random() * numeroLimte + 1);
+
+}
+function limparCampo(){
+    campo=document.getElementById('amigo');
+    campo.value='';
 }
